@@ -5,6 +5,11 @@ const { QueryTypes } = require('sequelize')
 const sequelize = require("../db/connection")
 
 
+router.get('/ska', (req, res) => {
+    res.send('hola')
+})
+
+
 router.post("/login", async (req, res) => {
     //Se recive los datos
     const user = req.body
