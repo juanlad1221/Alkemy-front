@@ -40,7 +40,7 @@ export default function LogIn() {
     setPassword(e.target.value);
   }
 
-  var url = 'http://localhost:3005/api/login'
+  var url = 'https://app-test-alkemy.herokuapp.com/api/login'
   const sendData = (url, username, password) => {
 
     PresenceValidateInput(username, password)
