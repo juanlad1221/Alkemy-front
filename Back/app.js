@@ -51,15 +51,13 @@ app.use('/api', require('./routes/authentication'))
 
 
 
-//Puerto y conexion de DB
-app.listen(3005, () => {
-    console.log('App running...')
-
-    //db conexion
-    sequelize.authenticate().then(() => {
-        console.log("Database Conected...")
-    }).catch(err => console.log('Error in database...', err))
+//--------------------------SERVER---------------------------------------------------------
+app.set('port', process.env.PORT || 3000);
+app.listen(app.get('port'), () => {
+  console.log(`Server corriendo en ${app.get('port')}`)
 })
+//------------------------------------------------------------------------------------------
+
 
 
 
