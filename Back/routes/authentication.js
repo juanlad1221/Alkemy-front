@@ -5,7 +5,7 @@ const { QueryTypes } = require('sequelize')
 const sequelize = require("../db/connection")
 
 
-router.get('/ska', (req, res) => {
+router.get("/ska", (req, res) => {
     res.send('hola')
 })
 
